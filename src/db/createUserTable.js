@@ -1,6 +1,6 @@
-import pool from "../config/db.js";
+import pool from "../config/dbConnect.js";
 
-const createUserUserTable = async () => {
+const createUserTable = async () => {
   const queryText = `CREATE TABLE IF NOT EXISTS users(
     id SERIAL PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
@@ -15,4 +15,4 @@ const createUserUserTable = async () => {
   }
 };
 
-export default createUserUserTable;
+export default createUserTable;
